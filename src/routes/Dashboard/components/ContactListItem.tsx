@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Contact } from '../../../types'
-
-export type ContactListItemProps = {
-    contact: Contact
-}
+import { ContactListItemProps } from '../../../model'
 
 export default function ContactListItem({ contact }: ContactListItemProps) {
     return (

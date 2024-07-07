@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ContactListProps } from '../Dashboard/components/ContactList'
+import { DetailsProps, Contact } from '../../model'
 import { useParams } from 'react-router-dom'
-import { Contact } from '../../types'
 import DetailsItem from './components/DetailsItem'
-
-type DetailsProps = ContactListProps
 
 export default function ContactDetails({ contacts }: DetailsProps) {
     const [contact, setContact] = useState<Contact>()

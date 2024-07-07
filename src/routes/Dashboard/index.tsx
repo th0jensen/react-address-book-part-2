@@ -1,15 +1,11 @@
-import { SetStateAction, useEffect } from 'react'
-import { Contact } from '../../types'
+import { useEffect } from 'react'
+import { DashboardProps, API_URL } from '../../model'
 import ContactList from './components/ContactList'
-
-type DashboardProps = {
-    contacts: Contact[]
-    setContacts: React.Dispatch<SetStateAction<Contact[]>>
-}
+import Header from './components/Header'
 
 export default function Dashboard({ contacts, setContacts }: DashboardProps) {
     useEffect(() => {
-        fetch('https://boolean-uk-api-server.fly.dev/th0jensen/contact')
+        fetch(API_URL)
             .then((res) => {
                 return res.json()
             })
@@ -21,7 +17,7 @@ export default function Dashboard({ contacts, setContacts }: DashboardProps) {
 
     return (
         <div>
-            <h2 style={{ padding: '0px 10px' }}>Contact List</h2>
+            <Header />
             <ContactList contacts={contacts} />
         </div>
     )

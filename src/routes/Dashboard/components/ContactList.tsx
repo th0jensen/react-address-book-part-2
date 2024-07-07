@@ -1,13 +1,9 @@
-import { Contact } from '../../../types'
+import { ContactListProps } from '../../../model'
 import ContactListItem from './ContactListItem'
-
-export type ContactListProps = {
-    contacts: Contact[]
-}
 
 export default function ContactList({ contacts }: ContactListProps) {
     return (
-        <div>
+        <div className='contact-list'>
             {contacts.map((contact) => (
                 <ContactListItem key={contact.id} contact={contact} />
             ))}

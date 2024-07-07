@@ -4,14 +4,45 @@
 }
 
 .sidebar {
-    height: 100vh;
+    height: 100%;
     grid-column: 1 / span 1;
-    border-right: 2px solid black;
-    margin-right: 10px;
+}
+
+.detail-wrapper {
+    margin-left: 10px;
+    height: 100%;
+    padding: 25px;
+    position: fixed;
+    left: 250px;
+    border-left: 2px solid black;
+}
+
+.detail {
+}
+
+.header {
+    height: 50px;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.contact-list {
+    padding-top: 75px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
 }
 
 .contact-wrapper {
-    padding: 10px;
 }
 
 .contact {

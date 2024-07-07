@@ -1,19 +1,19 @@
-import { ContactListItemProps } from '../../Dashboard/components/ContactListItem'
-
-type DetailsItemProps = ContactListItemProps
+import { DetailsItemProps } from '../../../model'
 
 export default function DetailsItem({ contact }: DetailsItemProps) {
     return (
-        <div>
-            <div>
-                <img src={contact.profileImage} />
+        <div className='detail-wrapper'>
+            <div className='detail'>
+                <div>
+                    <img src={contact.profileImage} />
+                </div>
+                <p>
+                    {contact.firstName} {contact.lastName}
+                </p>
+                <p>
+                    {contact.street}, {contact.city}
+                </p>
             </div>
-            <p>
-                {contact.firstName} {contact.lastName}
-            </p>
-            <p>
-                {contact.street}, {contact.city}
-            </p>
         </div>
     )
 }

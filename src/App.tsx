@@ -1,9 +1,9 @@
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import Dashboard from './routes/Dashboard'
 import { useState } from 'react'
-import { Contact } from './types.ts'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
 import ContactDetails from './routes/ContactDetails/index.tsx'
+import Dashboard from './routes/Dashboard'
+import { Contact } from './model'
 
 export default function App() {
     const [contacts, setContacts] = useState<Contact[]>([])
@@ -18,7 +18,16 @@ export default function App() {
                     path='/view/:id'
                     element={<ContactDetails contacts={contacts} />}
                 />
+                <Route path='/' element={<EmptyView />} />
             </Routes>
+        </div>
+    )
+}
+
+function EmptyView() {
+    return (
+        <div className='detail-wrapper'>
+            <span>No contact selected</span>
         </div>
     )
 }
