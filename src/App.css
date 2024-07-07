@@ -43,9 +43,24 @@
 }
 
 .contact-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .contact {
     color: black;
     text-decoration: none;
+}
+
+.contact-form {
+    display: grid;
+    row-gap: 10px;
+}
+
+.label-input {
+    display: grid;
+}
+
+.submit-button {
+    margin-top: 10px;
 }

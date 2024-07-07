@@ -17,10 +17,6 @@ export type Contact = {
     profileImage?: string
 }
 
-export type DashboardProps = {
-    setContacts: React.Dispatch<SetStateAction<Contact[]>>
-} & ContactListProps
-
 export type ContactListProps = {
     contacts: Contact[]
 }
@@ -29,5 +25,16 @@ export type ContactListItemProps = {
     contact: Contact
 }
 
+export type LabelInputProps = {
+    name: string
+    label: string
+    type: string
+    onChange: React.Dispatch<SetStateAction<string>>
+    value: string
+}
+
 export type DetailsProps = ContactListProps
+export type DashboardProps = ContactListProps
+export type CreateContactProps = ContactListProps
+export type ContactFormProps = ContactListProps
 export type DetailsItemProps = ContactListItemProps

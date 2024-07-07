@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
+    const navigate = useNavigate()
+
     return (
         <div className='header'>
             <Link
@@ -18,7 +21,7 @@ export default function Header() {
                     Contact List
                 </span>
             </Link>
-            <button>Add New Contact</button>
+            <button onClick={() => navigate('/add')}>Add New Contact</button>
         </div>
     )
 }
